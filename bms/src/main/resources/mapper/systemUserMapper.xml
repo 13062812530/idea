@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.idea.bms.dao.user.SystemUserDao">
+    <resultMap id="SystemUserResultMap" type="com.idea.bms.model.user.SystemUserModel">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="userName" property="userName" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="registerTime" property="registerTime" jdbcType="TIMESTAMP"/>
+        <result column="lastLoginIp" property="lastLoginIp" jdbcType="VARCHAR"/>
+        <result column="failLoginNum" property="failLoginNum" jdbcType="INTEGER"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
+        <result column="phone" property="phone" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="qq" property="qq" jdbcType="VARCHAR"/>
+        <result column="weCat" property="weCat" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询系统用户-->
+    <select id="selectByModel" parameterType="com.idea.bms.model.user.SystemUserModel" resultMap="SystemUserResultMap">
+        SELECT id,userName,registerTime,lastLoginIp,failLoginNum,status,name,mobile,phone,email,address,qq,weCat
+        FROM system_user
+        <where>
+            <if test="id !=null">
+                AND id=#{id}
+            </if>
+            <if test="userName !=null and userName !=''">
+                AND userName=#{userName}
+            </if>
+            <if test="password !=null and password !=''">
+                AND password=#{password}
+            </if>
+            <if test="status !=null">
+                AND status=#{status}
+            </if>
+        </where>
+    </select>
+
+    <!--更新系统用户-->
+    <update id="updateByModel" parameterType="com.idea.bms.model.user.SystemUserModel">
+        UPDATE system_user
+        <set>
+            <if test="lastLoginIp != null and lastLoginIp !=''">
+                lastLoginIp = #{lastLoginIp:VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status:INTEGER}
+            </if>
+        </set>
+        <where>
+            id = #{id:INTEGER}
+        </where>
+    </update>
+
+</mapper>
