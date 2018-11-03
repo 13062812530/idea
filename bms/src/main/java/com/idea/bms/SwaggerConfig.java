@@ -29,7 +29,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("idea管理后台系统")
+                .title("idea后台管理系统")
                 //创建人
                 .contact(new Contact("idea", "", ""))
                 //版本号

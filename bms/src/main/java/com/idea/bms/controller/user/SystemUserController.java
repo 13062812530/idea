@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
-@Api(value = "系统用户管理")
+@Api(tags = {"系统用户管理"})
 @RestController
 @RequestMapping(value = "/systemUser")
 public class SystemUserController {
