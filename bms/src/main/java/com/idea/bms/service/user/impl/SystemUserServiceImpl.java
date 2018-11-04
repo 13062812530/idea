@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.UUID;
 
 @Service
 @Transactional
@@ -68,6 +69,8 @@ public class SystemUserServiceImpl implements SystemUserService {
             //登录成功
             userModel.setLastLoginIp(CommonUtil.getIpAddr(request));
             systemUserDao.updateByModel(userModel);
+            String token = UUID.randomUUID().toString();
+
 
             br.setSuccess(true);
             br.setMsg("登录成功");

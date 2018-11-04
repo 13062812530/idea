@@ -23,7 +23,7 @@ spring:
     # password: 123456
 
     # mycat主从备份/读写分离
-    driverClass: com.mysql.jdbc.Driver
+    driverClass: com.mysql.cj.jdbc.Driver
     #url: jdbc:mysql://192.168.171.135:8066/TESTDB?useUnicode=true&characterEncoding=utf-8
     url: jdbc:mysql://127.0.0.1:3306/idea?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     username: root
