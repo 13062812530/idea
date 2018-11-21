@@ -5,15 +5,18 @@ import com.idea.bms.dto.user.SysytemUserLoginDto;
 import com.idea.bms.model.user.SystemUserModel;
 import com.idea.bms.service.user.SystemUserService;
 import com.idea.common.util.CommonUtil;
+import com.idea.common.util.RedisUtil;
 import com.idea.common.util.SecurityUtil;
 import com.idea.common.vo.BaseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -25,6 +28,9 @@ public class SystemUserServiceImpl implements SystemUserService {
 
     @Autowired
     private SystemUserDao systemUserDao;
+
+    @Value("${token.validTime}")
+    private Long tokenValidTime;
 
     /**
      * 系统用户登录
@@ -71,9 +77,12 @@ public class SystemUserServiceImpl implements SystemUserService {
             }
             //登录成功
             userModel.setLastLoginIp(CommonUtil.getIpAddr(request));
+            userModel.setLastLoginTime(new Date());
             systemUserDao.updateByModel(userModel);
-            String token = UUID.randomUUID().toString();
+            String token = UUID.randomUUID().toString().replace("-","");
+            RedisUtil.set(String.format("token/%d",userModel.getId()),token,tokenValidTime);
             resultMap.put("token",token);
+            br.setMap(resultMap);
             br.setSuccess(true);
             br.setMsg("登录成功");
         } catch (Exception e) {

@@ -45,6 +45,9 @@
             <if test="lastLoginIp != null and lastLoginIp !=''">
                 lastLoginIp = #{lastLoginIp:VARCHAR},
             </if>
+            <if test="lastLoginTime != null">
+                lastLoginTime = #{lastLoginTime:TIMESTAMP},
+            </if>
             <if test="status != null">
                 status = #{status:INTEGER}
             </if>

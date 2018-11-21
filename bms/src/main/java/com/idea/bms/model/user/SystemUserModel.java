@@ -12,6 +12,7 @@ public class SystemUserModel implements Serializable {
     private Integer id;//id主键
     private String userName;//登录用户名
     private String password;//登录密码
+    private Date lastLoginTime;//最后登录时间
     private Date registerTime;//注册时间
     private String lastLoginIp;//最后登录ip
     private Integer failLoginNum;//登录错误次数
