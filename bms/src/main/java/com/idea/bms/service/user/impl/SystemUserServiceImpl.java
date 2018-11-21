@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 @Service
@@ -33,6 +35,7 @@ public class SystemUserServiceImpl implements SystemUserService {
     @Override
     public BaseResult login(SysytemUserLoginDto loginDto,HttpServletRequest request) {
         BaseResult br = new BaseResult();
+        Map<String, Object> resultMap = new HashMap<>();
         try {
             //登录参数校验
             if (CommonUtil.isObjectEmpty(loginDto)) {
@@ -70,16 +73,14 @@ public class SystemUserServiceImpl implements SystemUserService {
             userModel.setLastLoginIp(CommonUtil.getIpAddr(request));
             systemUserDao.updateByModel(userModel);
             String token = UUID.randomUUID().toString();
-
-
+            resultMap.put("token",token);
             br.setSuccess(true);
             br.setMsg("登录成功");
         } catch (Exception e) {
-            log.error(String.format("用户%s登录异常",loginDto.getUserName()),e);
+            log.error(String.format("用户:%s登录异常",loginDto.getUserName()),e);
             br.setErrorMsg("系统错误");
             br.setSuccess(false);
         }
-
         return br;
     }
 }

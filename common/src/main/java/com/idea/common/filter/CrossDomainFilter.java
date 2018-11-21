@@ -7,13 +7,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 处理跨域
+ * 处理跨域过滤器
  */
 @Component
 public class CrossDomainFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-
     }
 
     @Override
@@ -31,6 +30,5 @@ public class CrossDomainFilter implements Filter {
 
     @Override
     public void destroy() {
-
     }
 }
