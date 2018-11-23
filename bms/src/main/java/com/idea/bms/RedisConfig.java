@@ -79,13 +79,6 @@ public class RedisConfig {
     }
     /**
      * 单机版配置
-     * @Title: JedisConnectionFactory
-     * @param @param jedisPoolConfig
-     * @param @return
-     * @return JedisConnectionFactory
-     * @autor lpl
-     * @date 2018年2月24日
-     * @throws
      */
     @Bean
     public JedisConnectionFactory JedisConnectionFactory(JedisPoolConfig jedisPoolConfig){
@@ -132,11 +125,6 @@ public class RedisConfig {
     }
     /**
      * 注入封装RedisTemplate
-     * @Title: redisUtil
-     * @return RedisUtil
-     * @autor lpl
-     * @date 2017年12月21日
-     * @throws
      */
     @Bean(name = "redisUtil")
     public RedisUtil redisUtil(RedisTemplate<String, Object> redisTemplate) {
