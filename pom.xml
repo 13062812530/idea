@@ -12,6 +12,7 @@
     <modules>
         <module>bms</module>
         <module>common</module>
+        <module>eureka</module>
     </modules>
 
     <parent>
