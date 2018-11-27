@@ -29,13 +29,13 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("idea后台管理系统")
+                .title("Idea后台管理系统")
                 //创建人
-                .contact(new Contact("idea", "", ""))
+                .contact(new Contact("idea", "", "13062812530@163.com"))
                 //版本号
                 .version("1.0")
                 //描述
-                .description("API 描述")
+                .description("API文档")
                 .build();
     }
 }

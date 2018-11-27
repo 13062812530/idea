@@ -2,21 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc761361-9d8d-4cda-928e-84bbaba71fb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/idea/common/filter/CrossDomainFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/InterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/NotCheckTokenAnn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/TokenInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/service/user/impl/SystemUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/service/user/impl/SystemUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bms/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bms/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/controller/user/SystemUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/controller/user/SystemUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
     </list>
     <list id="62a69554-9a48-43eb-83d7-1cc444b741c0" name="排除文件" comment="排除文件">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bms/bms.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/idea.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka/eureka.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/bms/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
+    <ignored path="$PROJECT_DIR$/eureka/target/" />
+    <ignored path="$PROJECT_DIR$/eurake/target/" />
+    <ignored path="$PROJECT_DIR$/config/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,47 +38,64 @@
     <session id="-1962262018">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="20" />
+          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.24" value="2" />
           <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.33" value="3" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.36" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.43" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="11" />
-          <entry key="java" value="1826" />
-          <entry key="txt" value="79" />
-          <entry key="xml" value="305" />
-          <entry key="yml" value="11" />
+          <entry key="dummy" value="19" />
+          <entry key="java" value="3356" />
+          <entry key="properties" value="26" />
+          <entry key="txt" value="125" />
+          <entry key="xml" value="591" />
+          <entry key="yml" value="408" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1826" />
-          <entry key="PLAIN_TEXT" value="90" />
-          <entry key="XML" value="305" />
-          <entry key="YAML" value="11" />
+          <entry key="JAVA" value="3356" />
+          <entry key="PLAIN_TEXT" value="144" />
+          <entry key="Properties" value="26" />
+          <entry key="XML" value="591" />
+          <entry key="YAML" value="408" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
+          <entry key="class" value="5" />
           <entry key="dtd" value="1" />
           <entry key="fxml" value="1" />
-          <entry key="java" value="25" />
-          <entry key="xml" value="9" />
-          <entry key="yml" value="4" />
+          <entry key="iml" value="4" />
+          <entry key="java" value="78" />
+          <entry key="properties" value="8" />
+          <entry key="xml" value="34" />
+          <entry key="yml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
+          <entry key="CLASS" value="5" />
           <entry key="DTD" value="1" />
-          <entry key="JAVA" value="25" />
-          <entry key="XML" value="10" />
-          <entry key="YAML" value="4" />
+          <entry key="IDEA_MODULE" value="4" />
+          <entry key="JAVA" value="78" />
+          <entry key="Properties" value="8" />
+          <entry key="XML" value="35" />
+          <entry key="YAML" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -78,44 +106,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="85" selection-start-line="85" selection-end-line="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/BmsApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/controller/user/SystemUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/SwaggerConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+            <state relative-caret-position="283">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,18 +123,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bms/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="1674">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
             </state>
           </provider>
         </entry>
@@ -147,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/service/user/impl/SystemUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-461">
-              <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+            <state relative-caret-position="129">
+              <caret line="82" column="21" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,20 +148,70 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/filter/CrossDomainFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="144">
+              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bms/src/main/resources/mapper/systemUserMapper.xml">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/InterceptorConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+            <state relative-caret-position="324">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/TokenInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://E:/repository/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/NotCheckTokenAnn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/util/RedisUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -179,15 +221,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>systemUserDao</find>
       <find>SystemUserDao</find>
+      <find>updateByModel</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -199,31 +244,61 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/bms/pom.xml" />
         <option value="$PROJECT_DIR$/bms/src/main/resources/application.yml.fxml" />
-        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/BmsApplication.java" />
         <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/Swagger.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/vo/BaseResult.java" />
         <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/dto/user/SysytemUserLoginDto.java" />
-        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/model/user/SystemUserModel.java" />
         <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/service/user/SystemUserService.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/util/SecurityUtils.java" />
         <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/dao/user/SystemUserDao.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/util/SecurityUtil.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/util/CommonUtil.java" />
-        <option value="$PROJECT_DIR$/bms/src/main/resources/mapper/systemUserMapper.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/controller/user/SystemUserController.java" />
-        <option value="$PROJECT_DIR$/bms/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/service/user/impl/SystemUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/filter/CrossDomainFilter.java" />
+        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/model/user/SystemUserModel.java" />
+        <option value="$PROJECT_DIR$/bms/src/main/resources/redis.properties" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/util/RedisUtil.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/enums/CommonType.java" />
+        <option value="$PROJECT_DIR$/eureka/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/eureka/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/CommonAplication.java" />
+        <option value="$PROJECT_DIR$/eurake/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/bms/pom.xml" />
+        <option value="$PROJECT_DIR$/eurake/pom.xml" />
+        <option value="$PROJECT_DIR$/eurake/src/main/java/com/idea/eurake/zipkin/ZipkinConfig.java" />
+        <option value="$PROJECT_DIR$/eurake/src/main/java/com/idea/eurake/EurakeApplication.java" />
+        <option value="$PROJECT_DIR$/eureka/src/main/java/com/idea/eureka/EurakeApplication.java" />
+        <option value="$PROJECT_DIR$/eureka/src/main/java/com/idea/eureka/EurekaApplication.java" />
+        <option value="$PROJECT_DIR$/eureka/src/main/java/com/idea/eureka/zipkin/ZipkinConfig.java" />
+        <option value="$PROJECT_DIR$/eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/config/pom.xml" />
+        <option value="$PROJECT_DIR$/bms/src/main/resources/mapper/systemUserMapper.xml" />
+        <option value="$PROJECT_DIR$/config/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/bms/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/BmsApplication.java" />
+        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/service/user/impl/SystemUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/Interceptor/Interceptor.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/Interceptor/CommonInterceptor.java" />
+        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/Interceptor/Interceptor.java" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/CommonInterceptor.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/NotCheckTokenAnn.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/TokenInterceptor.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/InterceptorConfig.java" />
+        <option value="$PROJECT_DIR$/bms/src/main/java/com/idea/bms/controller/user/SystemUserController.java" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -231,8 +306,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/Maven-3.5.3/bin" />
-        <option name="userSettingsFile" value="D:\Maven-3.5.3\conf\settings.xml" />
+        <option name="localRepository" value="E:\repository" />
+        <option name="mavenHome" value="D:/Maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\Maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -243,12 +319,25 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bms" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bms" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="70" />
+    <option name="x" value="-10" />
     <option name="width" value="1750" />
     <option name="height" value="970" />
   </component>
@@ -258,20 +347,30 @@
         <expanded-state>
           <State />
           <State>
-            <id>CodeSpring CoreSpring</id>
+            <id>Android</id>
           </State>
           <State>
-            <id>Spring</id>
+            <id>CorrectnessLintAndroid</id>
           </State>
           <State>
-            <id>Spring CoreSpring</id>
+            <id>Gradle</id>
+          </State>
+          <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
+            <id>LintAndroid</id>
+          </State>
+          <State>
+            <id>Maven</id>
+          </State>
+          <State>
+            <id>OSGi</id>
+          </State>
+          <State>
+            <id>Probable bugsGradle</id>
           </State>
         </expanded-state>
-        <selected-state>
-          <State>
-            <id>SpringJavaInjectionPointsAutowiringInspection</id>
-          </State>
-        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -285,9 +384,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -305,6 +403,48 @@
               <item name="idea" type="462c0819:PsiDirectoryNode" />
               <item name="bms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="idea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="idea" type="462c0819:PsiDirectoryNode" />
+              <item name="bms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="idea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="idea" type="462c0819:PsiDirectoryNode" />
+              <item name="bms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="idea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="idea" type="462c0819:PsiDirectoryNode" />
+              <item name="bms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="idea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="idea" type="462c0819:PsiDirectoryNode" />
+              <item name="bms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bms" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="idea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="idea" type="462c0819:PsiDirectoryNode" />
+              <item name="bms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="idea" type="b2602c69:ProjectViewProjectNode" />
@@ -351,13 +491,35 @@
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="idea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="idea" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="Intercepotor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="idea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="idea" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
@@ -366,17 +528,27 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541263136609" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543337193645" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\idea\bms\src\main\resources" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea\eureka\src\main\java\com\idea\eureka\zipkin" />
+      <recent name="E:\idea\eurake\src\main\java\com\idea\eurake\zipkin" />
+      <recent name="E:\idea\eurake\src\main\resources" />
+      <recent name="E:\idea\eureka\src\main\resources" />
       <recent name="E:\idea\common\src\main\java\com\idea\common\filter" />
-      <recent name="E:\idea\bms\src\main\resources\mapper" />
-      <recent name="E:\idea\common\src\main\java\com\idea\common\util" />
-      <recent name="E:\idea\bms\src\main\java\com\idea\bms" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -391,7 +563,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.BmsApplication">
     <configuration name="BmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="bms" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.idea.bms.BmsApplication" />
@@ -399,6 +571,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CommonAplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.idea.common.CommonAplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.idea.eureka.EurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BmsApplication" />
+      <item itemvalue="Spring Boot.CommonAplication" />
+      <item itemvalue="Spring Boot.EurekaApplication" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -414,7 +605,25 @@
       <workItem from="1541242307386" duration="1736000" />
       <workItem from="1541246660806" duration="3519000" />
       <workItem from="1541250252761" duration="12646000" />
-      <workItem from="1541306283365" duration="154000" />
+      <workItem from="1541306283365" duration="2686000" />
+      <workItem from="1542459530976" duration="1130000" />
+      <workItem from="1542642090482" duration="701000" />
+      <workItem from="1542810034392" duration="319000" />
+      <workItem from="1542810955955" duration="359000" />
+      <workItem from="1542815181288" duration="4985000" />
+      <workItem from="1542896222017" duration="3399000" />
+      <workItem from="1542980017263" duration="4853000" />
+      <workItem from="1542985212465" duration="7764000" />
+      <workItem from="1542994501023" duration="1855000" />
+      <workItem from="1542996395374" duration="2857000" />
+      <workItem from="1543038762023" duration="7150000" />
+      <workItem from="1543152362441" duration="7284000" />
+      <workItem from="1543159785891" duration="1845000" />
+      <workItem from="1543162454675" duration="157000" />
+      <workItem from="1543163031196" duration="378000" />
+      <workItem from="1543239371951" duration="3268000" />
+      <workItem from="1543246972242" duration="3060000" />
+      <workItem from="1543328521759" duration="6027000" />
     </task>
     <task id="LOCAL-00001" summary="测试idea首次提交">
       <created>1541246798526</created>
@@ -437,17 +646,66 @@
       <option name="project" value="LOCAL" />
       <updated>1541259204888</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="更新管理后台--跨域优化">
+      <created>1541306495594</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1541306495594</updated>
+    </task>
+    <task id="LOCAL-00005" summary="更新管理后台--token">
+      <created>1542815541157</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542815541157</updated>
+    </task>
+    <task id="LOCAL-00006" summary="更新管理后台--redis">
+      <created>1542819464713</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1542819464713</updated>
+    </task>
+    <task id="LOCAL-00007" summary="更新管理后台--redis">
+      <created>1542991792327</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542991792344</updated>
+    </task>
+    <task id="LOCAL-00008" summary="更新管理后台--redis">
+      <created>1542996626096</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1542996626096</updated>
+    </task>
+    <task id="LOCAL-00009" summary="配置eureka服务">
+      <created>1543044452777</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543044452778</updated>
+    </task>
+    <task id="LOCAL-00010" summary="删除eureka">
+      <created>1543159966774</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1543159966774</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18055000" />
+    <option name="totallyTimeSpent" value="77978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989858" visible="true" weight="0.23458445" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989858" visible="true" weight="0.28150135" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -457,24 +715,24 @@
       <window_info id="Structure" order="7" sideWeight="0.5010142" weight="0.22788204" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.18865249" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28936172" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.32892805" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" visible="true" weight="0.31424376" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013405" side_tool="true" weight="0.32892805" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3503546" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.36123347" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32908848" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.12600537" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -516,125 +774,193 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试idea首次提交" />
     <MESSAGE value="更新管理后台--swagger配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新管理后台--swagger配置" />
+    <MESSAGE value="更新管理后台--跨域优化" />
+    <MESSAGE value="更新管理后台--token" />
+    <MESSAGE value="更新管理后台--redis" />
+    <MESSAGE value="配置eureka服务" />
+    <MESSAGE value="删除eureka" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除eureka" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/model.java" />
-    <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/dao.java" />
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bms/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bms/src/main/resources/application.yml.fxml" />
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/vo/BaseResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repository/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar!/org/apache/commons/lang3/StringUtils.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar!/org/apache/commons/lang3/StringUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.4/mybatis-3.4.4.jar!/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd" />
+    <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/dao/user/SystemUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/util/CommonUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/util/SecurityUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="44" column="41" lean-forward="true" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repository/org/mybatis/mybatis/3.4.4/mybatis-3.4.4.jar!/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="339">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/model/user/SystemUserModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/dao/user/SystemUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/enums/CommonType.java" />
     <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/dto/user/SysytemUserLoginDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/vo/BaseResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        <state relative-caret-position="108">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka/src/main/resources/application.yml" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.10.RELEASE/spring-beans-4.3.10.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" />
+    <entry file="file://$PROJECT_DIR$/eurake/src/main/resources/application.yml" />
+    <entry file="file://$PROJECT_DIR$/eurake/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/bms/bms.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bms/src/main/resources/redis.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="3" selection-start-line="10" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka/eureka.iml" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.0.RELEASE/spring-boot-autoconfigure-2.1.0.RELEASE.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/common.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eurake/src/main/java/com/idea/eurake.java" />
+    <entry file="file://$PROJECT_DIR$/eurake/src/main/java/com/idea/eurake/zipkin/ZipkinConfig.java" />
+    <entry file="file://$PROJECT_DIR$/eurake/src/main/java/com/idea/eurake/zipkin/ZipkinProperties.java" />
+    <entry file="file://$PROJECT_DIR$/eureka/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/CommonAplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/eureka/src/main/java/com/idea/eureka/zipkin/ZipkinConfig.java" />
+    <entry file="file://$PROJECT_DIR$/eureka/src/main/java/com/idea/eureka/EurekaApplication.java" />
+    <entry file="file://$PROJECT_DIR$/config/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/config/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/bms/src/main/resources/mapper/systemUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/BmsApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        <state relative-caret-position="144">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/controller/user/SystemUserController.java">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/Interceptor.java" />
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/Interceptor/CommonInterceptor.java" />
+    <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/Interceptor/Interceptor.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar!/org/springframework/web/servlet/HandlerInterceptor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        <state relative-caret-position="108">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bms/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/CommonInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/filter/CrossDomainFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bms/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="134" column="1" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        <state relative-caret-position="195">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -645,49 +971,153 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bms/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bms/src/main/resources/mapper/systemUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/service/user/impl/SystemUserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-461">
-          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        <state relative-caret-position="129">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/filter/CrossDomainFilter.java">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/util/RedisUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="72">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/NotCheckTokenAnn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/InterceptorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repository/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/idea/common/Intercepotor/TokenInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bms/src/main/java/com/idea/bms/controller/user/SystemUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>common</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.1.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

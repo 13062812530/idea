@@ -2,6 +2,7 @@ package com.idea.bms.controller.user;
 
 import com.idea.bms.dto.user.SysytemUserLoginDto;
 import com.idea.bms.service.user.SystemUserService;
+import com.idea.common.Intercepotor.NotCheckTokenAnn;
 import com.idea.common.vo.BaseResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -25,7 +26,9 @@ public class SystemUserController {
     @ApiOperation(value = "系统用户登录",httpMethod = "POST",notes = "用户账号密码登录")
     @ApiResponse(code=200,message = "success",response = BaseResult.class)
     @RequestMapping(value = "login",method = RequestMethod.POST)
+    @NotCheckTokenAnn
     public BaseResult login(@RequestBody SysytemUserLoginDto loginDto, HttpServletRequest request){
        return systemUserService.login(loginDto,request);
     }
+
 }
