@@ -82,7 +82,7 @@ public class SystemUserServiceImpl implements SystemUserService {
             String token = UUID.randomUUID().toString().replace("-", "");
             RedisUtil.set(String.format("token/%s", token), userModel.getName(), tokenValidTime);
             resultMap.put("token", token);
-            br.setMap(resultMap);
+            br.setData(resultMap);
             br.setSuccess(true);
             br.setMsg("登录成功");
         } catch (Exception e) {
