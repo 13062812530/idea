@@ -8,10 +8,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -30,5 +27,13 @@ public class SystemUserController {
     public BaseResult login(@RequestBody SysytemUserLoginDto loginDto, HttpServletRequest request){
        return systemUserService.login(loginDto,request);
     }
+
+    @ApiOperation(value = "系统用户退出登录",httpMethod = "POST",notes = "系统用户退出登录")
+    @ApiResponse(code=200,message = "success",response = BaseResult.class)
+    @RequestMapping(value = "exit",method = RequestMethod.POST)
+    public BaseResult exit(HttpServletRequest request){
+        return systemUserService.exit(request);
+    }
+
 
 }

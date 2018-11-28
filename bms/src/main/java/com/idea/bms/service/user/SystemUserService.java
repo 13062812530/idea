@@ -12,4 +12,11 @@ public interface SystemUserService {
      * @return
      */
     BaseResult login(SysytemUserLoginDto loginDto,HttpServletRequest request);
+
+    /**
+     * 系统用户退出登录
+     * @param request
+     * @return
+     */
+    BaseResult exit(HttpServletRequest request);
 }

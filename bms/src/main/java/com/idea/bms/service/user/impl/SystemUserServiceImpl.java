@@ -39,7 +39,7 @@ public class SystemUserServiceImpl implements SystemUserService {
      * @return
      */
     @Override
-    public BaseResult login(SysytemUserLoginDto loginDto,HttpServletRequest request) {
+    public BaseResult login(SysytemUserLoginDto loginDto, HttpServletRequest request) {
         BaseResult br = new BaseResult();
         Map<String, Object> resultMap = new HashMap<>();
         try {
@@ -70,7 +70,7 @@ public class SystemUserServiceImpl implements SystemUserService {
                 return br;
             }
             Integer status = userModel.getStatus();
-            if(status >0){
+            if (status > 0) {
                 br.setErrorMsg("账号异常,请联系管理员处理");
                 br.setSuccess(false);
                 return br;
@@ -79,14 +79,39 @@ public class SystemUserServiceImpl implements SystemUserService {
             userModel.setLastLoginIp(CommonUtil.getIpAddr(request));
             userModel.setLastLoginTime(new Date());
             systemUserDao.updateByModel(userModel);
-            String token = UUID.randomUUID().toString().replace("-","");
-            RedisUtil.set(String.format("token/%d",userModel.getId()),token,tokenValidTime);
-            resultMap.put("token",token);
+            String token = UUID.randomUUID().toString().replace("-", "");
+            RedisUtil.set(String.format("token/%s", token), userModel.getName(), tokenValidTime);
+            resultMap.put("token", token);
             br.setMap(resultMap);
             br.setSuccess(true);
             br.setMsg("登录成功");
         } catch (Exception e) {
-            log.error(String.format("用户:%s登录异常",loginDto.getUserName()),e);
+            log.error(String.format("用户:%s登录异常", loginDto.getUserName()), e);
+            br.setErrorMsg("系统错误");
+            br.setSuccess(false);
+        }
+        return br;
+    }
+
+    /**
+     * 系统用户退出登录
+     *
+     * @param request
+     * @return
+     */
+    @Override
+    public BaseResult exit(HttpServletRequest request) {
+        BaseResult br = new BaseResult();
+        try {
+            String token = request.getHeader("token");
+            if (null != token) {
+                String key = "token/" + token;
+                RedisUtil.del(key);
+            }
+            br.setSuccess(true);
+            br.setMsg("退出成功");
+        } catch (Exception e) {
+            e.printStackTrace();
             br.setErrorMsg("系统错误");
             br.setSuccess(false);
         }

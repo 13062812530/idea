@@ -26,5 +26,5 @@ public class BaseResult implements Serializable {
     private String errorMsg;
 
     @ApiModelProperty(value = "响应结果集",dataType = "Map",position = 5)
-    private Map<?,?> map;
+    private Map<?,?> data;
 }

@@ -1,6 +1,9 @@
 package com.idea.common.Intercepotor;
 
+import com.alibaba.fastjson.JSON;
+import com.idea.common.enums.TokenStatus;
 import com.idea.common.util.RedisUtil;
+import com.idea.common.vo.BaseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.method.HandlerMethod;
@@ -32,13 +35,14 @@ public class TokenInterceptor implements HandlerInterceptor {
         if(null ==token){
             token=request.getHeader("token");
         }
-
         //验证token是否有效
-        if(StringUtils.isBlank(token)){
-            return false;
-        }
-        boolean check = RedisUtil.hasKey(token);
-        if(!check){
+        if(StringUtils.isBlank(token) || !RedisUtil.hasKey("token/"+token)){
+            BaseResult br = new BaseResult();
+            br.setCode(TokenStatus.overdue.getCode());
+            br.setSuccess(false);
+            br.setErrorMsg("Token已过期,请重新登录");
+            String result = JSON.toJSONString(br);
+            response.getWriter().print(result);
             return false;
         }
         return true;
