@@ -1,7 +1,8 @@
 package com.idea.bms.service.user.impl;
 
 import com.idea.bms.dao.user.SystemUserDao;
-import com.idea.bms.dto.user.SysytemUserLoginDto;
+import com.idea.bms.dto.index.SystmUserListQueryDto;
+import com.idea.bms.dto.user.SystemUserLoginDto;
 import com.idea.bms.model.user.SystemUserModel;
 import com.idea.bms.service.user.SystemUserService;
 import com.idea.common.util.CommonUtil;
@@ -39,7 +40,7 @@ public class SystemUserServiceImpl implements SystemUserService {
      * @return
      */
     @Override
-    public BaseResult login(SysytemUserLoginDto loginDto, HttpServletRequest request) {
+    public BaseResult login(SystemUserLoginDto loginDto, HttpServletRequest request) {
         BaseResult br = new BaseResult();
         Map<String, Object> resultMap = new HashMap<>();
         try {
@@ -110,6 +111,24 @@ public class SystemUserServiceImpl implements SystemUserService {
             }
             br.setSuccess(true);
             br.setMsg("退出成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            br.setErrorMsg("系统错误");
+            br.setSuccess(false);
+        }
+        return br;
+    }
+
+    /**
+     * 查询系统用户列表
+     * @param queryDto
+     * @return
+     */
+    @Override
+    public BaseResult list(SystmUserListQueryDto queryDto) {
+        BaseResult br = new BaseResult();
+        try {
+
         } catch (Exception e) {
             e.printStackTrace();
             br.setErrorMsg("系统错误");

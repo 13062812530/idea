@@ -10,7 +10,7 @@ spring:
     encoding.force: true
   datasource:
     driverClass: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/idea?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://192.168.26.128:3306/idea?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     username: root
     password: 123456
 
@@ -28,6 +28,12 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://127.0.0.1:1111/eureka/
 mybatis:
   mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
   type-aliases-package: com.idea.bms.model  # 注意：对应实体类的路径

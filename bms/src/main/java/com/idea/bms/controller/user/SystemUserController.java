@@ -1,6 +1,7 @@
 package com.idea.bms.controller.user;
 
-import com.idea.bms.dto.user.SysytemUserLoginDto;
+import com.idea.bms.dto.index.SystmUserListQueryDto;
+import com.idea.bms.dto.user.SystemUserLoginDto;
 import com.idea.bms.service.user.SystemUserService;
 import com.idea.common.Intercepotor.NotCheckTokenAnn;
 import com.idea.common.vo.BaseResult;
@@ -24,8 +25,15 @@ public class SystemUserController {
     @ApiResponse(code=200,message = "success",response = BaseResult.class)
     @RequestMapping(value = "login",method = RequestMethod.POST)
     @NotCheckTokenAnn
-    public BaseResult login(@RequestBody SysytemUserLoginDto loginDto, HttpServletRequest request){
+    public BaseResult login(@RequestBody SystemUserLoginDto loginDto, HttpServletRequest request){
        return systemUserService.login(loginDto,request);
+    }
+
+    @ApiOperation(value = "查询系统用户列表",httpMethod = "POST",notes = "查询系统用户列表")
+    @ApiResponse(code=200,message = "success",response = BaseResult.class)
+    @RequestMapping(value = "list",method = RequestMethod.POST)
+    public BaseResult list(@RequestBody SystmUserListQueryDto queryDto){
+        return systemUserService.list(queryDto);
     }
 
     @ApiOperation(value = "系统用户退出登录",httpMethod = "POST",notes = "系统用户退出登录")
@@ -34,6 +42,7 @@ public class SystemUserController {
     public BaseResult exit(HttpServletRequest request){
         return systemUserService.exit(request);
     }
+
 
 
 }

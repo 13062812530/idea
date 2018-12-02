@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @ApiModel("系统用户登录请求参数")
 @Data
-public class SysytemUserLoginDto implements Serializable {
+public class SystemUserLoginDto implements Serializable {
     private static final long serialVersionUID = 188833125412428821L;
 
     @ApiModelProperty(value = "用户名", dataType = "String", required = true)
